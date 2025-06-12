@@ -1,23 +1,21 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-body{
-    background-color: #202020;
-    color: whitesmoke;
-    font-family: 'Rubik', sans-serif;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body {
+  background-color: #202020;
+  color: whitesmoke;
+  font-family: 'Rubik', sans-serif;
 
-    min-height: 100vh;
-    margin: 0;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+
+
 }
-
-
 
 /* Dark/Light Mode */
 
@@ -63,9 +61,6 @@ input {
 
 
 
-
-/* Toggle Switch Styles */
-
 /* Nav bar */
 nav {
   width: 100%;
@@ -80,14 +75,15 @@ nav {
   z-index: 100;
 }
 
-/* Wrapper for toggle and icons */
+/* Toggle Switch Styles */
+
 .toggle-wrapper {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-/* Toggle switch base */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -96,18 +92,18 @@ nav {
   margin: 0;
 }
 
-/* Hide actual checkbox */
+
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The visible slider */
+
 .slider {
   position: absolute;
   cursor: pointer;
-  
+
   background-color: #ead666;
   transition: 0.4s;
   border-radius: 34px;
@@ -117,7 +113,7 @@ nav {
   bottom: 0;
 }
 
-/* The round slider knob */
+
 .slider:before {
   content: "";
   position: absolute;
@@ -130,15 +126,15 @@ nav {
   border-radius: 50%;
 }
 
-/* Checked state */
-input:checked + .slider {
+
+input:checked+.slider {
   background-color: #ccc;
 }
-input:checked + .slider:before {
+
+input:checked+.slider:before {
   transform: translateX(22px);
 }
 
-/* Icons */
 .toggle-icon {
   font-size: 1.2rem;
   user-select: none;
@@ -152,76 +148,76 @@ input,
 nav,
 footer,
 #definition-info {
-  transition: 
-    background-color 0.5s cubic-bezier(.4,0,.2,1),
-    border-color 0.5s cubic-bezier(.4,0,.2,1);
+  transition:
+    background-color 0.5s cubic-bezier(.4, 0, .2, 1),
+    border-color 0.5s cubic-bezier(.4, 0, .2, 1);
 }
 
-/* book animation */
+/* hero section book animation */
 .lottie-container {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
 }
 
 dotlottie-player {
-    width: 300px;
-    height: 300px;
-    transform: scale(2.5) translateY(10px);
-    transform-origin: center;
-    pointer-events: none;
+  width: 300px;
+  height: 300px;
+  transform: scale(2.5) translateY(10px);
+  transform-origin: center;
+  pointer-events: none;
 }
 
 
-h1{
-    font-size: 40px;
+h1 {
+  font-size: 40px;
 }
 
 /* search bar + definition display  */
-input{
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    margin: 1rem;
-    border-radius: 17px 5px 5px 17px;
-    border: none;
-    width: 300px;
-    max-width: 90%;
+input {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  margin: 1rem;
+  border-radius: 17px 5px 5px 17px;
+  border: none;
+  width: 300px;
+  max-width: 90%;
 }
 
 
-#searchBtn{
+#searchBtn {
   color: black;
   padding: 1rem 1.5rem;
   font-size: 1rem;
   margin: 1rem;
   background-size: 300% 100%;
-  background-image: linear-gradient(
-    to right,
-    #ead666,
-    #a78926,
-    #ead666,
-    #d7b237
-  );
+  background-image: linear-gradient(to right,
+      #ead666,
+      #a78926,
+      #ead666,
+      #d7b237);
   border-radius: 5px 17px 17px 5px;
   transition: all 0.4s ease-in-out;
   border: none;
   background-position: 100% 0;
-  
+
 }
 
 #searchBtn:hover {
-  
+
   color: black;
   cursor: pointer;
   background-position: 0 0;
 }
 
-#definition-info, #searchTerm, #searchBtn {
+#definition-info,
+#searchTerm,
+#searchBtn {
   text-align: center;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -233,11 +229,11 @@ input{
 }
 
 #definition-info {
-    max-height: 40vh;
-    overflow-y: auto;
-    padding-right: 0.5rem;
-    scrollbar-width: thin;
-  }
+  max-height: 40vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+}
 
 
 /* Footer Dropdown (up) menu */
@@ -252,7 +248,7 @@ footer {
   padding: 1rem 0;
   z-index: 10;
   background-color: var(--footer-bg);
-  
+
 }
 
 
@@ -277,7 +273,7 @@ footer {
 
   /* background-color: #333;
   color: #ead666; */
-  
+
   background-color: var(--input-bg);
   color: var(--dropdown-text);
 
@@ -301,7 +297,7 @@ footer {
 .footer-dropdown:hover,
 .footer-dropdown:focus {
   background-color: #4e4e4e;
-  color: #ead666; 
+  color: #ead666;
   outline: none;
   box-shadow: none;
   transition: background-color 0.5s ease;
@@ -315,7 +311,7 @@ footer {
   body {
     padding: 0 0.5rem;
     overflow-y: auto;
-    max-height: 100vh; 
+    max-height: 100vh;
   }
 
   .search-container {
@@ -357,15 +353,12 @@ footer {
   }
 
   /* enable scrolling for long definitions */
-   #definition-info {
+  #definition-info {
     max-height: 40vh;
     overflow-y: auto;
     padding-right: 0.5rem;
     scrollbar-width: thin;
   }
 
- 
+
 }
-
-
-  
