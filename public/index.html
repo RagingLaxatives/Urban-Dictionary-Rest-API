@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Dictionary API - Gabriela Monzon</title>
+</head>
+
+
+<body>
+   
+    
+    <nav>
+    <div class="toggle-wrapper">
+        <span class="toggle-icon">🌙</span>
+        <label class="switch">
+        <input type="checkbox" id="modeToggle"/>
+        <span class="slider round"></span>
+        </label>
+        <span class="toggle-icon">☀️</span>
+    </div>
+    </nav>
+
+
+    <!-- Book animation -->
+    <div class="lottie-container">
+        <dotlottie-player src="https://lottie.host/e94703fd-f146-47a8-b402-c924ddafa9c1/KGNDWwEcHs.lottie"
+            background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay>
+        </dotlottie-player>
+    </div>
+
+    <!-- Book animation -->
+    <div class="search-container">
+        <h1>Urban Dictionary Lookup</h1>
+        <input type="text" id="searchTerm" placeholder="Enter a word..." />
+        <button id="searchBtn">Search</button>
+    </div>
+
+  <div id="definition-info">Type a word and hit search.</div>
+
+</body>
+
+<!-- dropdown menu (top definitions) -->
+<footer>
+  <div class="footer-dropdown-container">
+    <select id="top-definitions" class="footer-dropdown">
+      <option value="" disabled selected hidden>Top Definitions</option>
+      <option value="water">Water</option>
+      <option value="Porm">Porm</option>
+      <option value="Clutch Oven">Clutch Oven</option>
+      <option value="Flip-Flocks">Flip-Flocks</option>
+    </select>
+  </div>
+</footer>
+<!-- lottie file -->
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<script src="main.js"></script>
+</html>

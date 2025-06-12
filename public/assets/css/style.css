@@ -1,0 +1,371 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+body{
+    background-color: #202020;
+    color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+
+    
+}
+
+
+
+/* Dark/Light Mode */
+
+:root {
+  --bg-color: #202020;
+  --text-color: whitesmoke;
+  --input-bg: #333;
+  --button-bg: #ead666;
+  --dropdown-bg: #333;
+  --dropdown-text: #ead666;
+  --footer-bg: #202020;
+}
+
+body.light-mode {
+  --bg-color: #e2e2e2;
+  --text-color: #222;
+  --input-bg: #fff;
+  --button-bg: #ead666;
+  --dropdown-bg: #e0e0e0;
+  --dropdown-text: #222;
+  --footer-bg: #e2e2e2;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+input {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+#searchBtn {
+  background-image: linear-gradient(to right, var(--button-bg), var(--button-bg));
+  color: var(--text-color);
+}
+
+.footer-dropdown {
+  background-color: var(--dropdown-bg);
+  color: var(--dropdown-text);
+}
+
+
+
+
+/* Toggle Switch Styles */
+
+/* Nav bar */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--bg-color);
+  padding: 1rem 0;
+  z-index: 100;
+}
+
+/* Wrapper for toggle and icons */
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Toggle switch base */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  margin: 0;
+}
+
+/* Hide actual checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The visible slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  
+  background-color: #ead666;
+  transition: 0.4s;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* The round slider knob */
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Checked state */
+input:checked + .slider {
+  background-color: #ccc;
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Icons */
+.toggle-icon {
+  font-size: 1.2rem;
+  user-select: none;
+  color: var(--text-color);
+}
+
+body,
+input,
+#searchBtn,
+.footer-dropdown,
+nav,
+footer,
+#definition-info {
+  transition: 
+    background-color 0.5s cubic-bezier(.4,0,.2,1),
+    border-color 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+/* book animation */
+.lottie-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    
+}
+
+dotlottie-player {
+    width: 300px;
+    height: 300px;
+    transform: scale(2.5) translateY(10px);
+    transform-origin: center;
+    pointer-events: none;
+}
+
+
+h1{
+    font-size: 40px;
+}
+
+/* search bar + definition display  */
+input{
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    margin: 1rem;
+    border-radius: 17px 5px 5px 17px;
+    border: none;
+    width: 300px;
+    max-width: 90%;
+}
+
+
+#searchBtn{
+  color: black;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  margin: 1rem;
+  background-size: 300% 100%;
+  background-image: linear-gradient(
+    to right,
+    #ead666,
+    #a78926,
+    #ead666,
+    #d7b237
+  );
+  border-radius: 5px 17px 17px 5px;
+  transition: all 0.4s ease-in-out;
+  border: none;
+  background-position: 100% 0;
+  
+}
+
+#searchBtn:hover {
+  
+  color: black;
+  cursor: pointer;
+  background-position: 0 0;
+}
+
+#definition-info, #searchTerm, #searchBtn {
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+#definition-info {
+  max-width: 600px;
+  word-wrap: break-word;
+}
+
+#definition-info {
+    max-height: 40vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+  }
+
+
+/* Footer Dropdown (up) menu */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 0;
+  z-index: 10;
+  background-color: var(--footer-bg);
+  
+}
+
+
+.footer-dropdown-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.footer-label {
+  color: #ead666;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* background-color: #333;
+  color: #ead666; */
+  
+  background-color: var(--input-bg);
+  color: var(--dropdown-text);
+
+
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23ead666' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 14l5-5 5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* Hover and focus states for the dropdown */
+.footer-dropdown:hover,
+.footer-dropdown:focus {
+  background-color: #4e4e4e;
+  color: #ead666; 
+  outline: none;
+  box-shadow: none;
+  transition: background-color 0.5s ease;
+}
+
+
+
+/* mobile responsiveness */
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 0.5rem;
+    overflow-y: auto;
+    max-height: 100vh; 
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    word-break: break-word;
+    padding: 0 0.5rem;
+  }
+
+  input,
+  #searchBtn,
+  #definition-info {
+    width: 100%;
+    max-width: 85%;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+  }
+
+  .footer-dropdown {
+    min-width: 0;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .footer-dropdown-container {
+    width: 100vw;
+    padding: 0 0.5rem;
+  }
+
+  footer {
+    padding: 0.5rem 0;
+  }
+
+  /* enable scrolling for long definitions */
+   #definition-info {
+    max-height: 40vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+  }
+
+ 
+}
+
+
+  
